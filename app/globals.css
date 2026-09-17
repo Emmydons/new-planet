@@ -1,0 +1,387 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: light;
+  /* Luxury Palette — Warm Ivory & Deep Charcoal with Gold */
+  --background: #FAFAF6;
+  --foreground: #1C1816;
+  --card: #FFFFFF;
+  --card-foreground: #1C1816;
+  --popover: #FFFFFF;
+  --popover-foreground: #1C1816;
+  --primary: #1C1816;
+  --primary-foreground: #FAFAF6;
+  --secondary: #F3EDE4;
+  --secondary-foreground: #1C1816;
+  --muted: #EDE6DA;
+  --muted-foreground: #7A6E65;
+  --accent: #BF9B3C;
+  --accent-foreground: #FFFFFF;
+  --destructive: #DC2626;
+  --border: #E6DDD2;
+  --input: #FFFFFF;
+  --ring: #BF9B3C;
+  --chart-1: #BF9B3C;
+  --chart-2: #1C1816;
+  --chart-3: #7A6E65;
+  --chart-4: #D4AC50;
+  --chart-5: #EDE6DA;
+  --radius: 0rem;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1C1816;
+  --sidebar-primary: #1C1816;
+  --sidebar-primary-foreground: #FAFAF6;
+  --sidebar-accent: #BF9B3C;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #E6DDD2;
+  --sidebar-ring: #BF9B3C;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #141210;
+  --foreground: #F5F0E8;
+  --card: #1C1816;
+  --card-foreground: #F5F0E8;
+  --popover: #1C1816;
+  --popover-foreground: #F5F0E8;
+  --primary: #BF9B3C;
+  --primary-foreground: #141210;
+  --secondary: #1C1816;
+  --secondary-foreground: #F5F0E8;
+  --muted: #2A2520;
+  --muted-foreground: #9E9189;
+  --accent: #D4AC50;
+  --accent-foreground: #141210;
+  --destructive: #F87171;
+  --border: #2A2520;
+  --input: #1C1816;
+  --ring: #BF9B3C;
+  --chart-1: #BF9B3C;
+  --chart-2: #D4AC50;
+  --chart-3: #9E9189;
+  --chart-4: #BF9B3C;
+  --chart-5: #2A2520;
+  --sidebar: #1C1816;
+  --sidebar-foreground: #F5F0E8;
+  --sidebar-primary: #BF9B3C;
+  --sidebar-primary-foreground: #141210;
+  --sidebar-accent: #D4AC50;
+  --sidebar-accent-foreground: #141210;
+  --sidebar-border: #2A2520;
+  --sidebar-ring: #BF9B3C;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    color-scheme: dark;
+    --background: #141210;
+    --foreground: #F5F0E8;
+    --card: #1C1816;
+    --card-foreground: #F5F0E8;
+    --popover: #1C1816;
+    --popover-foreground: #F5F0E8;
+    --primary: #BF9B3C;
+    --primary-foreground: #141210;
+    --secondary: #1C1816;
+    --secondary-foreground: #F5F0E8;
+    --muted: #2A2520;
+    --muted-foreground: #9E9189;
+    --accent: #D4AC50;
+    --accent-foreground: #141210;
+    --destructive: #F87171;
+    --border: #2A2520;
+    --input: #1C1816;
+    --ring: #BF9B3C;
+    --chart-1: #BF9B3C;
+    --chart-2: #D4AC50;
+    --chart-3: #9E9189;
+    --chart-4: #BF9B3C;
+    --chart-5: #2A2520;
+    --sidebar: #1C1816;
+    --sidebar-foreground: #F5F0E8;
+    --sidebar-primary: #BF9B3C;
+    --sidebar-primary-foreground: #141210;
+    --sidebar-accent: #D4AC50;
+    --sidebar-accent-foreground: #141210;
+    --sidebar-border: #2A2520;
+    --sidebar-ring: #BF9B3C;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Scroll Animations */
+@layer utilities {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .parallax {
+    transform: translateY(0);
+    transition: transform 0.1s linear;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAF6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BF9B3C;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AC50;
+}
+
+/* Navigation */
+.azure-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background: #FAFAF6;
+  border-bottom: 1px solid #E6DDD2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 80px;
+}
+
+.azure-logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1C1816;
+  letter-spacing: -0.02em;
+}
+
+.azure-nav-link {
+  text-decoration: none;
+  color: #1C1816;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: color 0.2s;
+}
+
+.azure-nav-link:hover {
+  color: #BF9B3C;
+}
+
+.azure-btn-book {
+  background: transparent;
+  color: #BF9B3C;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid #BF9B3C;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.25s;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.azure-btn-book:hover {
+  background: #BF9B3C;
+  color: #FFFFFF;
+}
+
+/* Card */
+.azure-card {
+  background: white;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.azure-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Booking bar */
+.booking-bar {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-top: 2px solid #BF9B3C;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.booking-field {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  border-right: 1px solid #E6DDD2;
+  flex: 1;
+  min-width: 0;
+}
+
+.booking-field label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #BF9B3C;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.3rem;
+}
+
+.booking-field input,
+.booking-field select {
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  color: #1C1816;
+  background: transparent;
+  font-weight: 500;
+  width: 100%;
+}
+
+.azure-btn-search {
+  background: #1C1816;
+  color: white;
+  padding: 0 2.5rem;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: background 0.25s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.azure-btn-search:hover {
+  background: #BF9B3C;
+}
+
+.azure-btn-search:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
